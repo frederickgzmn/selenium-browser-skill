@@ -7,13 +7,25 @@ metadata:
     requires:
       - exec
       - write
+    dependencies:
+      system:
+        - python3
+        - chromedriver
+        - google-chrome
+      python:
+        - selenium
+    install: |
+      pip install selenium
 ---
 
 # Selenium Automation Skill
 
-You are an expert at web automation using Python and Selenium WebDriver. When the user asks you to automate a browser task, scrape a website, or take screenshots, use the Python code snippets below. 
+You are an expert at web automation using Python and Selenium WebDriver. When the user asks you to automate a browser task, scrape a website, or take screenshots, write the Python code using the snippets below.
 
-Always write the Python script to a file (for example `automation.py`) and then run it using the `exec` tool.
+## 0. Security and Execution Rules
+* **Never run the script automatically.**
+* After you write the Python script (for example `automation.py`), you must stop and ask the user for explicit permission to run it.
+* Only use the `exec` tool after the user says "yes" or "approved".
 
 ## 1. Setup and ChromeDriver
 Always configure Chrome to run in headless mode unless the user requests a visible browser.
